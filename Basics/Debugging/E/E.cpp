@@ -31,9 +31,8 @@ Dog::Dog()
 
 Dog::Dog(const Dog &)
 {
-	// since I'm not sure we can just write action = "bark" here too
-	// since we are not passing in any accessible dog to copy, we are just
-	// making sure "this" dog is properly initialized with the correct action
+	// FIX: make sure "this" dog is properly initialzied with the correct action
+	// since we are not passing in any accessible dog to copy
 	*this = Dog();
 }
 
