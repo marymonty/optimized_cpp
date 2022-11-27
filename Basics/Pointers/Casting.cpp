@@ -40,7 +40,8 @@ struct Bird
 };
 
 
-/*	petStore = 24 bytes
+/* MY DIAGRAM:	
+*	petStore = 24 bytes
 *	___________________________________
 *	| catC0  | catC1 | catC2 | pad0   |
 *	___________________________________
@@ -58,6 +59,7 @@ struct Bird
 */
 struct petStore
 {
+	// MY INLINE COMMENTS
 	Cat		morris;	// 3 bytes
 	char	pad0;	// 1 byte
 	Dog		fido;	// 6 bytes
@@ -91,6 +93,8 @@ void Students_Casting()
 	val = p[1];		//ca
 	QuestionAnswer( 0, val );
 
+	/* MY ANSWERS ARE INLINE COMMENTS */
+	
 	//      question 1)  What is the value of r[0]
 	//      question 2)  What is the value of r[1]
 	//      question 3)  What is the value of r[2]
@@ -143,7 +147,8 @@ void Students_Casting()
 	QuestionAnswer(10, pAddress);
 
 
-/*	petStore = 24 bytes
+/* MY DIAGRAM 	
+*	petStore = 24 bytes
 *	___________________________________
 *	| catC0  | catC1 | catC2 | pad0   |
 *	___________________________________
@@ -164,6 +169,7 @@ void Students_Casting()
 	//      question 12)  number of unsigned chars to c1
 	//      question 13)  number of unsigned chars to b2
 
+	/* MY COMMENTS BELOW, AND MY ANSWERS INLINE COMMENTS */
 	//subtraction - the difference between pointers is the distance in array elements
 	//		between the two elements. If we convert everything to char *, then the 
 	//		difference between pointers will be the amount of bytes between the two
