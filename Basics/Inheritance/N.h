@@ -32,7 +32,7 @@
 // REFACTOR class N,O,P - MODIFY this FILE
 // -----------------------------------------------------
 
-/*	need to add the virtual keyword, just like in class's G and F	*/
+/* MY FIX: need to add the virtual keyword, just like in class's G and F  */
 class N : virtual public M
 {
 public:
