@@ -18,6 +18,7 @@ struct ZipCode
 	~ZipCode();
 	ZipCode & operator = (const ZipCode &in);
 	
+	/* MY CODE */
 	// need the operator < to compare for inserting in the set
 	bool operator < (const ZipCode & z) const;
 
@@ -32,6 +33,8 @@ struct ZipCode
 	private:
 		int zip2;
 	};
+	
+	/* END OF MY CODE */
 
 	// You need to leave the data alone... you can add methods
 	int  zip;
