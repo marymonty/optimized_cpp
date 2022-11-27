@@ -10,6 +10,7 @@
 
 // add code here if you want
 
+/* MY CODE */
 // sort alphabetically by second char in ZipCode char* s
 bool ZipCode::operator < (const ZipCode& z) const
 {
@@ -48,17 +49,6 @@ bool ZipCode::ZipCode_has_zip::operator()(const ZipCode& z)
 	return zipEqual;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 bool isEqualZip(const ZipCode& z)
 {
 	bool zipEqual = false;
@@ -69,4 +59,5 @@ bool isEqualZip(const ZipCode& z)
 	return zipEqual;
 }
 
+/* END OF MY CODE */
 // ---  End of File ---
