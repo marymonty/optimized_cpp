@@ -15,8 +15,7 @@
 class Monkey
 {
 public:
-
-	// insert your code here
+	/* my code */
 	// Big Four operators - Default, Copy, Assignment, Destructor
 	
 	/*	Default Constructor	*/
@@ -30,6 +29,8 @@ public:
 
 	/*	Specialized Constructor	*/
 	Monkey(int _x, int _y = 575);
+	
+	/* end my code */
 
 	// accessors
 	int getX();
