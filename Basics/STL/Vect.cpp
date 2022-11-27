@@ -9,6 +9,8 @@
 // ----------------------------------
 
 // ADD CODE HERE if needed:
+
+/* MY CODE */
 // operator < needed for sorting the new vector in strict weak ordering
 // which is just lowest numbers first, so 
 // { 1, 3, 5 } would come before { 2, 1, 1 } because first position 1 < 2
@@ -39,5 +41,7 @@ bool Vect::operator < (const Vect& v) const
 	}
 	return lessThan;
 }
+
+/* END OF MY CODE */
 
 // ---  End of File ---
