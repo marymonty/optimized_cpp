@@ -30,11 +30,13 @@ void Problem_A( std::vector<int> &UnitTest_A_orig,
 	//    Name the vector: A_Vector
 	// ----------------------------------------------------
 
-		// ADD CODE HERE:
-		// get the size of the int array first
+	/* MY CODE */
+	// get the size of the int array first
 	unsigned int A_size = sizeof(A) / sizeof(int);
 	std::vector<int> A_Vector;
 	A_Vector.insert(A_Vector.end(), &A[0], A+A_size);
+	
+	/* END MY CODE */
 
 		// ---------------------------------------------------------------------
 		// Copies STL to gobal for unit test (Do NOT Remove or modify next line)
@@ -47,7 +49,7 @@ void Problem_A( std::vector<int> &UnitTest_A_orig,
 	//    No iterative, simple approach, use the appropriate STL calls for efficiency
 	// ----------------------------------------------------
 
-		// ADD CODE HERE:
+		/* MY CODE */
 		// prob uses std::find
 		std::vector<int>::iterator found2 = std::find(A_Vector.begin(), A_Vector.end(), 2);
 		std::vector<int>::iterator found8 = std::find(A_Vector.begin(), A_Vector.end(), 8);
@@ -79,6 +81,8 @@ void Problem_A( std::vector<int> &UnitTest_A_orig,
 				found8 = std::find(found2 + 1, A_Vector.end(), 8);
 			}
 		}
+	
+		/* END OF MY CODE */
 		
 		// ---------------------------------------------------------------------
 		// Copies STL to gobal for unit test (Do NOT Remove or modify next line)
@@ -90,8 +94,10 @@ void Problem_A( std::vector<int> &UnitTest_A_orig,
 	//          Smallest to largest order
 	// ----------------------------------------------------
 
-		// ADD CODE HERE:
+		/* MY CODE */
 		std::sort(A_Vector.begin(), A_Vector.end());
+	
+		/* END OF MY CODE */
 
 		// ---------------------------------------------------------------------
 		// Copies STL to gobal for unit test (Do NOT Remove or modify next line)
