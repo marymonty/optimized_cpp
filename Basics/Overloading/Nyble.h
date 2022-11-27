@@ -15,8 +15,8 @@
 class Nyble
 {
 public:
-	// insert your code here
 	
+	/* my code */
 	// Big Four operators - Default, Copy, Assignment, Destructor
 	/*	Default Constructor	*/
 	Nyble();
@@ -44,6 +44,7 @@ public:
 	/*	casting operator to unsigned int */
 	operator unsigned int();
 
+	/* end of my code */
 
 	unsigned char getData();
 	//my getData - accessible with const Nybles
@@ -56,6 +57,8 @@ private:
 	unsigned char data;
 
 };
+
+/* my code */
 
 /*	Unary Operators 
 *		these are free functions of global scope, so defined outside the class	*/
@@ -77,6 +80,7 @@ Nyble operator~(const Nyble& r); // Bitwise complement
 *		+Nyble			*/
 Nyble operator+(Nyble& r); // Assign sum
 
+/* end of my code */
 
 #endif
 
