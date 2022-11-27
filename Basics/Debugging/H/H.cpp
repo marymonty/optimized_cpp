@@ -14,8 +14,9 @@
 //
 // ----------------------------------------------------------------------
 
+// FIX: pass int n by reference (&n)
 // Function getNum(), returns true/false, increments n
-// we need n to be saving the value - so pass by reference
+// we need n to be saving the value - so pass n by reference
 bool getNum(int &n)
 {
 	n = n + 1;
