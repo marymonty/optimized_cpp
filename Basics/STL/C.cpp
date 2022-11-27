@@ -21,16 +21,7 @@ ZipCode data[] =
 };
 
 ZipCode JunkDataC{ "tmp", 0x0 };
-/*
-bool isEqual(const int& i)
-{
-	bool isTrue = false;
-	if (this->zip == i)
-	{
-		isTrue = true;
-	}
-	return isTrue;
-}*/
+
 
 void Problem_C(	std::vector< ZipCode > &UnitTest_ZipSort,
 				ZipCode &UnitTest_Bee,
@@ -44,8 +35,9 @@ void Problem_C(	std::vector< ZipCode > &UnitTest_ZipSort,
 	//    Name the set: zippy
 	// ----------------------------------------------------
 
-		// ADD CODE HERE:
+		/* MY CODE */
 		std::set<ZipCode> zippy(std::begin(data), std::end(data));
+		/* END OF MY CODE */
 
 		// ---------------------------------------------------------------------
 		// Copies STL to gobal for unit test (Do NOT Remove or modify next line)
@@ -60,9 +52,9 @@ void Problem_C(	std::vector< ZipCode > &UnitTest_ZipSort,
 	//     Name the set iterator: zippy_it
 	// ----------------------------------------------------
 
-		// ADD CODE HERE:
+		/* MY CODE */
 		std::set< ZipCode >::iterator zippy_it = zippy.find(ZipCode("Bee", 0xFFEE));
-
+		/* END OF MY CODE */
 
 		// ---------------------------------------------------------------------
 		// Copies STL to gobal for unit test (Do NOT Remove or modify next line)
@@ -80,8 +72,10 @@ void Problem_C(	std::vector< ZipCode > &UnitTest_ZipSort,
 	//     Name the set iterator: zippy_it
 	// ----------------------------------------------------
 
-		// ADD CODE HERE:
+		/* MY CODE */
 		zippy_it = std::find_if(zippy.begin(), zippy.end(), ZipCode::ZipCode_has_zip(0xBB77));
+		/* END OF MY CODE */
+	
 		// ---------------------------------------------------------------------
 		// Copies STL to gobal for unit test (Do NOT Remove or modify next line)
 		// ---------------------------------------------------------------------
