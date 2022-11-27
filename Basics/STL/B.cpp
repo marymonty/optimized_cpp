@@ -32,10 +32,12 @@ void Problem_B(	std::vector<int> &UnitTest_B_orig,
 	//    Name the list: B_List
 	// ----------------------------------------------------
 
-		// ADD CODE HERE:
+	/* MY CODE */
 	std::list<int> B_List;
 	unsigned int B_size = sizeof(B) / sizeof(int);
 	B_List.assign(B, B + B_size);
+	
+	/* END OF MY CODE */
 
 		// ---------------------------------------------------------------------
 		// Copies STL to gobal for unit test (Do NOT Remove or modify next line)
@@ -48,7 +50,7 @@ void Problem_B(	std::vector<int> &UnitTest_B_orig,
 	//    No iterative, simple approach, use the appropriate STL calls for efficiency
 	// ----------------------------------------------------
 
-		// ADD CODE HERE:
+		/* MY CODE */
 		std::list<int>::iterator find22 = std::find(B_List.begin(), B_List.end(), 22);
 		std::list<int>::iterator find88 = std::find(B_List.begin(), B_List.end(), 88);
 		if (std::next(find22, 1) == find88)
@@ -78,6 +80,8 @@ void Problem_B(	std::vector<int> &UnitTest_B_orig,
 				find88 = std::find(std::next(find22, 1), B_List.end(), 8);
 			}
 		}
+	
+	/* END OF MY CODE */
 
 
 		// ---------------------------------------------------------------------
@@ -90,9 +94,11 @@ void Problem_B(	std::vector<int> &UnitTest_B_orig,
 	//        Largest to Smallest
 	// ----------------------------------------------------
 
-		// ADD CODE HERE:
+		/* MY CODE */
 		B_List.sort();
 		B_List.reverse();
+	
+	/* END OF MY CODE */
 
 		// ---------------------------------------------------------------------
 		// Copies STL to gobal for unit test (Do NOT Remove or modify next line)
