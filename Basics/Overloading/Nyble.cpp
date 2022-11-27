@@ -4,6 +4,8 @@
 
 #include "Nyble.h"
 
+/* my code */
+
 /**********************	My OWN HELPER FUNCTIONS	**************************/
 
 /*
@@ -387,6 +389,7 @@ Nyble::operator unsigned int()
 	return data_int;
 }
 
+/* end of my code */
 
 /*	unsigned char getData()
 *		given accessor method
