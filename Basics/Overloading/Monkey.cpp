@@ -8,6 +8,9 @@
 int Monkey::numStringsCreated = 0;
 int Monkey::numStringsDestroyed = 0;
 
+
+/* my code */
+
 /*	Default Constructor
 *	Monkey()
 *		initializes x to 878
@@ -113,6 +116,9 @@ Monkey::~Monkey()
 	//increment numStringsDestroyed
 	numStringsDestroyed++;
 }
+
+
+/* end my code, however I did add comments for all functions below */
 
 
 /*
