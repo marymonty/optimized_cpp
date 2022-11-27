@@ -12,7 +12,7 @@
 //
 // ----------------------------------------------------------------------
 
-// need to initialize wings somewhere
+// FIX: wings was never initialzied anywhere, so initialize in Car constructor
 Car::Car()
 {
 	wings = 0;
