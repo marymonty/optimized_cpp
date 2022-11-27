@@ -37,6 +37,8 @@ void Students_PointerWalk()
     // ADD CODE to find the answer...
     // YES - you are coding here:
 
+	/* MY CODE BELOW AND MY ANSWERS ARE INLINE COMMENTS */
+	
 	// example: 
 	unsigned char *p;
 	p = &data[0];
