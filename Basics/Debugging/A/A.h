@@ -13,7 +13,7 @@ public:
 	int getSecond();
 	
 private:
-	// need to match the order to the initializer list in A.cpp
+	// FIX: needed to match data initializations to the order of the initializer list in A.cpp
 	int Second;
 	int First;
 };
