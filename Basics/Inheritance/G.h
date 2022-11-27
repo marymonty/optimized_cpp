@@ -29,7 +29,8 @@
 // REFACTOR class G - MODIFY this FILE
 // -----------------------------------------------------
 
-/*	The issue here is illustrated below:
+/* MY FIX:	
+*	The issue here is illustrated below:
 *		E					E
 *		|					|
 *		v					v
