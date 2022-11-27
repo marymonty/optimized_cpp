@@ -13,6 +13,7 @@ double A()  // Argument Deduction
 	// Only change this call line below:
 
 	// val = minA(5,4.2); is wrong fix
+	/* FIX: explicitly double cast */
 	val = minA<double>(5, 4.2);
 	return val;
 }
