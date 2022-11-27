@@ -21,8 +21,10 @@ struct Vect
 	Vect & operator = (const Vect &) = default;
 	~Vect() = default;
 
+	/* MY CODE */
 	// need to add a comparative operator to sort
 	bool operator < (const Vect& v) const;
+	/* END OF MY CODE */
 
 };
 
