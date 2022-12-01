@@ -14,8 +14,9 @@ enum ChunkType
 	UV_TYPE
 };
 
+/* MY CODE */
 bool checkIfChunk(const char* inputParam);
-// Add functions protos
+/* END OF MY CODE */
 
 #endif 
 
