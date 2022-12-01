@@ -11,9 +11,9 @@ D::D()
 {
 }
 
-/*	
-*		Need to specify that we are using the non-default C class constructor
-*		in order to input the correct xVal and yVal
+/* FIX:
+*	Need to specify that we are using the non-default C class constructor
+*	in order to input the correct xVal and yVal
 */
 D::D(int xVal, int yVal, int zVal) : C(xVal, yVal)
 {
