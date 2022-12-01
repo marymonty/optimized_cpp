@@ -23,7 +23,9 @@ int GetTriangularSum()
 	int total = 0;
 	for (int i = 0; i < Num; i++)
 	{
-		// this was using pointer arithemetic - i++
+		// FIX: fix the pointer arithemetic
+		//	the index was i++ which would mean i pointer was double
+		//	incrementing with each for loop, so i++ needed to just be made i
 		total += array[i];
 	}
 
