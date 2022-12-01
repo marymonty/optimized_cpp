@@ -11,7 +11,7 @@ A::A()
 {
 }
 
-/* VIRTUAL DESTRUCTOR
+/* FIX: VIRTUAL DESTRUCTOR
 *		this A base class needs to have a virtual destructor
 *		Virtual destructors are needed when an instance of the 
 *		derived class (B) can be deleted through an A* (which is what Public1 tests)
