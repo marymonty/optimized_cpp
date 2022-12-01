@@ -5,6 +5,8 @@
 #include "Wrapper.h"
 
 // Add code here if needed
+
+/* MY CODE */
 GameVect::GameVect()
 {
 
@@ -24,5 +26,7 @@ void GameVect::getY(float& storeY)
 {
 	storeY = y;
 }
+
+/* END OF MY CODE */
 
 // --- End of File ---
