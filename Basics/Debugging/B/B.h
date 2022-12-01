@@ -17,6 +17,7 @@ class StPatricks : public BankHoliday
 {
 public:
 	const char *GetDay();
+	// FIX: defined a StPatricks() default constructor
 	StPatricks();
 	//~StPatricks();
 
