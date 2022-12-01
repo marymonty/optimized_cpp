@@ -23,6 +23,10 @@ BankHoliday::BankHoliday()
 	init();
 }
 
+/* FIX : added this StPatricks default constructor
+ * 	with the init() call so that StPatricks would print the 
+ *	correct initialization message when created
+ */
 StPatricks::StPatricks()
 {
 	init();
