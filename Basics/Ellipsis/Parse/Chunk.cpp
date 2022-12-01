@@ -6,6 +6,11 @@
 
 // Add code here... if desired
 
+/* MY CODE */
+/* checkIfChunk
+ * 	function to verify if the input parameter (inputParam)
+ *	is one of the enum ChunkTypes
+*/
 bool checkIfChunk(const char* inputParam)
 {
 	bool isEnum = false;
@@ -32,6 +37,7 @@ bool checkIfChunk(const char* inputParam)
 	return isEnum;
 }
 
+/* END OF MY CODE */
 
 // ---  End of File ---------------
 
