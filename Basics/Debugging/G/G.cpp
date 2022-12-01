@@ -18,6 +18,7 @@
 // allocates an array of n integers
 int *ArrayOfInt(int num)
 {
+	// FIX: needed to cast num to be an unsigned int to properly index
 	return new int[(unsigned int)num];
 }
 
