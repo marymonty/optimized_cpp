@@ -31,7 +31,8 @@ public:
 	A();
 
 	//A& operator = (const A& a);
-
+	
+	// FIX: need to make the destructor virtual
 	virtual ~A();
 
 	int getX();
