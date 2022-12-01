@@ -6,6 +6,7 @@
 
 #include "Chunk.h"
 
+/* MY CODE */
 int main(int argc, char *argv[])
 {
 	// argc is number of params passed
@@ -97,5 +98,7 @@ int main(int argc, char *argv[])
 	}
 	return returnVal;
 }
+
+/* END OF MY CODE */
 
 // ---  End of File ---------------
