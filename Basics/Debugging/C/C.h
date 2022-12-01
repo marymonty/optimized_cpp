@@ -9,6 +9,8 @@ class Student
 {
 public:
 	Student();
+	// FIX: made the Student destructor virtual so the Student created
+	// 	when each subsequent child class is created gets properly deleted
 	virtual ~Student();
 
 	static char *greeting;
