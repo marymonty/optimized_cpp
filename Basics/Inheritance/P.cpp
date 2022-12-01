@@ -11,7 +11,7 @@ P::P()
 {
 }
 
-/*	the initializer list needs to be in this specific order:
+/* FIX: the initializer list needs to match the data layout in P.h:
 *		initializing aVal, then bVal, then cVal, then dVal
 */
 P::P(int aVal, int bVal, int cVal, int dVal) : 
