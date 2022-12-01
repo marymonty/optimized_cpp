@@ -56,6 +56,7 @@
 class GameVect : private Vect2D_Native
 {
 public:
+	/* MY CODE */
 	// REMEMBER - you cannot reimplement setX() or setY()
 	GameVect();
 	virtual ~GameVect();
@@ -66,11 +67,12 @@ public:
 	// 6) allow setX() and setY() to be called as - is from the wrapper class
 	using Vect2D_Native::setX;
 	using Vect2D_Native::setY;
-	
+	/* END OF MY CODE */
 
 private:
 	// REMEMBER - you cannot add data
-	// 
+	
+	/* MY CODE */
 	// 1) variables:  x, y should be private
 	using Vect2D_Native::x;
 	using Vect2D_Native::y;
@@ -80,7 +82,7 @@ private:
 	// 3) prevent the original getX() and getY() from being called from the wrapper class
 	using Vect2D_Native::getX;
 	using Vect2D_Native::getY;
-
+	/* END OF MY CODE */
 };
 
 #endif
