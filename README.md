@@ -1,5 +1,5 @@
 # optimized_cpp
-Code from an Optimized C++ class that focused not only on code correctness, but on code optimization and speed as well.
+Mary Montgomery's (@marymonty on github) Code from an Optimized C++ class that focused not only on code correctness, but on code optimization and speed as well.
 
 Basics directory: contains smaller snippets of code for C++ "basics", showing my knowledge of topics including inheritance, templates, overloading, and pointers.
 
