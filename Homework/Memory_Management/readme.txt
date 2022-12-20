@@ -4,3 +4,6 @@ Create a memory system within a heap.
 This whole assignment (two assignments combined) was to write my own 
 malloc and free functions. This custom memory system ended up being faster
 than the original (Microsoft) memory system. 
+
+All my work is done in Mem.h and Mem.cpp - the free and malloc functions, as well 
+as many helper functions.
