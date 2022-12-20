@@ -11,10 +11,12 @@ class Vect2D
 {
 public:
 	Vect2D();
+	/* MY CODE to set these to default */
 	// to help performance we set any of the Big 4 we can to be default
 	Vect2D(const Vect2D& v) = default;
 	Vect2D& operator = (const Vect2D& v) = default;
 	~Vect2D() = default;
+	/* END OF MY CODE */
 
 	Vect2D(const float inX, const float inY);
 
