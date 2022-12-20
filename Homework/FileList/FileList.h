@@ -28,18 +28,13 @@ public:
 	bool FindKey(unsigned int key, Node &foundNode);
 
 	//---------------------------------------------------------------------------------------
-	// Please implement(rework) these methods (add additional methods to help if you want)
+	// Please implement(rework) these methods
 	//---------------------------------------------------------------------------------------
 
 	FileList(const char *const pFileName, int numNodes);
 	void WriteToFile(const char *const pFileName, AList *pAList);
 
 private:
-
-	// ----------------------------------------------------------
-	// data - You may add additional data fields to this class
-	// ----------------------------------------------------------
-
 	Node *pHead;
 	int  NumNodes;
 
