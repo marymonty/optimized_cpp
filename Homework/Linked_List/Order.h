@@ -12,8 +12,7 @@
 class Order 
 {
 public:
-	// add code here (add more methods if desired)
-	// Big Four operators - Default, Copy, Assignment, Destructor
+	/* MY CODE */
 	/*	Default Constructor	*/
 	Order();
 	/*	Copy Constructor	*/
@@ -22,6 +21,7 @@ public:
 	Order& operator = (const Order& r);
 	/*	Destructor	*/
 	~Order();
+	/* END OF MY CODE */
 
 	// Public Methods (Required)
 	Order(const Name name);
@@ -40,7 +40,7 @@ public:
 
 
 private:
-	// Data: ---------------------------
+	/* MY CODE */
 	// orderName : an enum of type Name class
 	Name orderName;
 	// Order pointers to store the next and previous Orders for a doubly linked list
@@ -48,6 +48,7 @@ private:
 	Order* prev;
 	// HotDog pointer to store the first (head) HotDog in each Order
 	HotDog* head;
+	/* END OF MY CODE */
 };
 
 #endif
