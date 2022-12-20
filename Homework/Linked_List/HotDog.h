@@ -11,9 +11,7 @@
 class HotDog
 {
 public:
-	// add code here (add more methods if desired)
-	// Big Four operators - Default, Copy, Assignment, Destructor
-
+	/* MY CODE */
 	/*	Default Constructor	*/
 	HotDog();
 	/*	Copy Constructor	*/
@@ -22,7 +20,7 @@ public:
 	HotDog& operator = (const HotDog& r);
 	/*	Destructor	*/
 	~HotDog();
-
+	/* END OF MY CODE */
 	 
 	// Public Methods (Required)
 	void Minus(const Condiments condiment);
@@ -39,18 +37,14 @@ public:
 	void Print(int num = -1, int numTabs = 0) const;
 
 private:
-	// Data: ---------------------------
-	//        add data here
-	//
-	// add links (next/prev)... 
-	//
+	/* MY CODE */
 	// use the condiments unsigned integer provided
 	// no additional data for condiments
-	//
 	unsigned int condiments;
 	// HotDog pointers for keeping track of next and previous hotdogs in the list
 	HotDog* next;
 	HotDog* prev;
+	/* END OF MY CODE */
 };
 
 #endif
