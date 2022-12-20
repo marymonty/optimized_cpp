@@ -7,6 +7,7 @@
 
 #include "SecondMax.h"
 
+/* MY CODE */
 int SecondMax(int count, ...)
 {
 	// we access the ellipsis using va_list
@@ -67,5 +68,7 @@ const void printVect(const std::vector<int> intVect)
 		j++;
 	}
 }
+
+/* END OF MY CODE */
 
 // ---  End of File ---------------
