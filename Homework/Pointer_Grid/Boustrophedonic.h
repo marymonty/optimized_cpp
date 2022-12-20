@@ -9,7 +9,7 @@
 
 void Remove(Node *&head, int row, int col);
 
-// Add extra methods here (if desired):
+/* MY CODE - HELPER METHODS */
 void checkEven(int row, int col, bool& rowIsEven, bool& colIsEven);
 void findClosestEvenRow(int row, int& closestEvenRow);
 void moveToClosestEvenRow(Node*& traverser, int closestEvenRow);
@@ -22,6 +22,7 @@ void oddRowEvenColLoops(Node*& traverser, Node*& nodeNorth, Node*& nodeEast, Nod
 void oddRowOddColLoops(Node*& traverser, Node*& nodeNorth, Node*& nodeEast, Node*& nodeSouth, Node*& nodeWest, Node* deletingNode);
 void updateBoarderNodes(Node*& nodeNorth, Node*& nodeEast, Node*& nodeSouth, Node*& nodeWest);
 void deleteNode(Node*& deletingNode, Node*& pHead);
+/* END OF MY CODE*/
 
 #endif
 
