@@ -40,6 +40,7 @@ public:
 	Heap *GetHeap();
 	void Print(int count);
 
+	/* MY HELPER FUNCTIONS */
 	const void removeFreeBlock(Free* traverser);
 	const void removeUsedBlock(Used* uRemoving);
 	const void addUsedBlockToHead(Used* Utraverser);
@@ -60,6 +61,7 @@ public:
 	const void setFalseBAboveFree(Used* newUsedBlock);
 	const void setBAboveFree(Free* newlyFree);
 	const void adjustSecretPointer(Free* &newlyFree);
+	/* END OF MY HELPER FUNCTIONS */
 
 private:
 	void privSetFreeHead(Free* p) const;
