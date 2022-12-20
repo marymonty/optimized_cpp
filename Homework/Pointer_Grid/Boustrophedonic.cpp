@@ -4,6 +4,7 @@
 
 #include "Boustrophedonic.h"
 
+/* MY CODE */
 /*	
 *		GENERAL NOTES
 *
@@ -860,5 +861,7 @@ void deleteNode(Node*& deletingNode, Node*& pHead)
 
 	delete deletingNode;
 }
+
+/* END OF MY CODE */
 // ---  End of File ---
 
