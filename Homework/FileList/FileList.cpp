@@ -15,9 +15,10 @@ FileList::FileList()
 : pHead(nullptr),
 NumNodes(0)
 {
-	// Hint you might need to rework this...
-	// if you add data to FileList class
 }
+
+
+/* MY CODE */
 
 FileList::~FileList()
 {
@@ -26,24 +27,13 @@ FileList::~FileList()
 		Node* memBlock = this->pHead;
 		delete memBlock;
 	}
-	
 }
 
-
+/* WriteToFile
+	open a binary file and write all nodes to the file
+*/
 void FileList::WriteToFile(const char * const pFileName, AList *pAList)
 {
-	// Make sure you close the file after you fill it
-	// Use fopen,fwrite,ftell,...,fclose
-
-	// Hint: Open the file, write the nodes into the file 
-
-	// Grads - You need to do the Load-In-Place technique
-	//         You cannot have more than 2 new functions in this method
-
-	// Everyone - Fill in your CustomDestructCommand::Command() that will be used 
-	//            in the destructor..
-
-
 	FILE* pFileHandle = nullptr;
 	// try to open the file and make sure it worked
 	assert(pFileName);
@@ -65,24 +55,15 @@ void FileList::WriteToFile(const char * const pFileName, AList *pAList)
 	assert(numBytesWritten == (sizeof(Node) * pAList->GetNumNodes()));
 	// close the file once written
 	fclose(pFileHandle);
-
 }
 
+/* FileList
+	creates the Linked List
+	open the File, read and create new nodes using Load-in-Place (only one New)
+	then fill the nodes with the data from the binary file
+*/
 FileList::FileList(const char * const pFileName, int numNodes)
 {
-	// Create the Linked List... You cannot use the original code
-	// The input file, and numNodes is all you need to recreate the FileList
-	
-	// Hint: Open the file, read and create new nodes, 
-	//       fill them with the data from the file
-
-	// Grads - You need to do the Load-In-Place technique
-	//         You cannot have more than 2 new functions in this method
-
-	// Everyone - Fill in your CustomDestructCommand::Command() that will be used 
-	//            in the destructor.
-
-
 	this->pHead = nullptr;
 	this->NumNodes = 0;
 
@@ -127,5 +108,7 @@ FileList::FileList(const char * const pFileName, int numNodes)
 	//assert(numElementsRead == (size_t)numNodes);
 	fclose(pFileHandle);
 }
+
+/* END OF MY CODE */
 
 // ---  End of File ---
