@@ -61,12 +61,15 @@ public:
 	const void setFalseBAboveFree(Used* newUsedBlock);
 	const void setBAboveFree(Free* newlyFree);
 	const void adjustSecretPointer(Free* &newlyFree);
-	/* END OF MY HELPER FUNCTIONS */
-
+	
+	
+/* MY PRIVATE HELPER FUNCTIONS */
 private:
 	void privSetFreeHead(Free* p) const;
 	void privSetNextFit(Free* p) const;
 	void privAddFreeBlock(uint32_t BlockSize) const;
+	
+	/* END OF ALL MY HELPER FUNCTIONS */
 
 private:
 	// Useful in malloc and free
