@@ -1,44 +1,14 @@
 Memory Management
 
-Create a memory system within a heap.
-This whole assignment (two assignments combined) was to write my own 
-malloc and free functions. This custom memory system ended up being faster
-than the original (Microsoft) memory system. 
+Create a memory system within a heap. This whole assignment (two assignments combined) was to write my own malloc and free functions. This custom memory system ended up being faster than the original (Microsoft) memory system. 
 
 What I did:
-My work is done in Mem.h and Mem.cpp. I wrote my own free and malloc functions, as well 
-as many helper functions to make those free and malloc functions more readable. 
+My work is done in Mem.h and Mem.cpp. I wrote my own free and malloc functions, as well as many helper functions to make those free and malloc functions more readable. 
 
-I started by constructing memory Mem, which just stores a pointer to a "heap" (block of memory).
-Initially the block of memory is cast to a Free pointer (there are Free and Used classes that store
-information regarding the memory they point to - the size of the block of memory, the type of memory (free or used),
-the next and previous blocks of memory of that type, and a boolean of whether or not the block above is
-a Free block or not - this is important later). 
+I started by constructing memory Mem, which just stores a pointer to a "heap" (block of memory). Initially the block of memory is cast to a Free pointer (there are Free and Used classes that store information regarding the memory they point to - the size of the block of memory, the type of memory (free or used), the next and previous blocks of memory of that type (free or used), and a boolean of whether or not the block above is a Free block or not - this is important later). 
 
-Once the Mem is constructed, we can start getting calls to allocate and deallocate memory. 
-The malloc function uses the Next Fit algorithm (similar to first fit, where it initially searches through the 
-Free blocks of memory, looking for a block big enough for the malloc, however, once it finds a block big enough,
-it stores that block, and the next time we need to allocate we start from that block, rather than back at the beginning) 
-to place the allocated blocks of memory. Once a free block is found with enough room for the allocation, we change this 
-Free block (or the portion of it we need) into a Used block. We then update the headers that keep track of Used and Free
-blocks within the heap, and fix the Used and Free doubly linked lists to account for this allocation (either a Free memory 
-block was shrunk by the allocation, or the allocation totally overtook a free block, and the double linked list of Used 
-memory blocks has a new Used block created by this allocation). We also must update metrics of the current total Free memory size, 
-and the current total Used memory size. We cannot allocated memory when we have gone through all Free blocks and there is not one 
-big enough for the allocation. Malloc returns a pointer to the newly allocated block (if one exists).
+Once the Mem is constructed, we can start getting calls to allocate and deallocate memory. The malloc function uses the Next Fit algorithm (similar to first fit, where it initially searches through the Free blocks of memory, looking for a block big enough for the malloc, however, once it finds a block big enough, it stores that block, and the next time we need to allocate memory we start from that stored block, rather than back at the beginning) to place the allocated blocks of memory. Once a free block is found with enough room for the allocation, we change this Free block (or the portion of it we need) into a Used block. We then update the headers that keep track of Used and Free blocks within the heap, and fix the Used and Free doubly linked lists to account for this allocation (either a Free memory block was shrunk by the allocation, or the allocation totally overtook a free block so we need to updated the Free linked list, also the double linked list of Used memory blocks needs to be updated to account for the new Used block created by this allocation). We also must update metrics of the current total Free memory size, and the current total Used memory size. We cannot allocated memory when we have gone through all Free blocks and there is not one big enough for the allocation. Malloc returns a pointer to the newly allocated block (if one exists).
 
-Once something is allocated, it can be freed. The Free function returns a Used block back to the heap as a free block, 
-this may require coalescing (when the Used block is Freed we need to check if there are Free blocks below and above to make
-sure we combine all these contiguous Free blocks into one unified Free block). Once a block is Freed, we check below, then 
-above to coalesce if needed, then we correct the doubly linked lists for Used and Free, then we update the metrics of current
-Used and Free memory amounts. There are two additional things you always have to do when Freeing a block which is to "tell your
-below neighbor that you are now free" which means to go into the block directly below our newly freed block, and to set their boolean
-flag value saying that the block above them (our newly freed block) is in fact truely a free block. The other thing we need to do is
-"bury our secret", which means we use the SecretPtr struct, we travel to the block below our newly freed block and then use pointer 
-arithmetic to move up the heap by one secretptr size (so now we are within our newly free block, one secretptr size away from the block
-below) and we put in this SecretPtr that points to the start address of this newly Free block (we do this because when we are at the block
-below, we don't know the size of this newly free block, but we can find this pointer that will tell us exactly where the start of this 
-Free block is). 
+Once something is allocated, it can be freed. The Free function returns a Used block back to the heap as a Free block. This may require coalescing (when the Used block is Freed we need to check if there are Free blocks below and above to make sure we combine all these contiguous Free blocks into one unified Free block). Once a block is Freed, we check below, then above to coalesce if needed, then we correct the doubly linked lists for Used and Free, then we update the metrics of current Used and Free memory amounts. There are two additional things you always have to do when Freeing a block which is to "tell your below neighbor that you are now free" which means to go into the block directly below our newly freed block, and to set their boolean flag value indicating that the block above them (our newly freed block) is in fact truely a Free block. The other thing we need to do is "bury our secret", which means we use the SecretPtr struct, we travel to the block below our newly freed block and then use pointer arithmetic to move up the heap by one secretptr size (so now we are within our newly free block, one secretptr size away from the block below) and we put in this SecretPtr that points to the start address of this newly Free block (we do this because when we are at the block below, we don't know the size of this newly free block, but we can find this pointer that will tell us exactly where the start of this Free block is). 
 
-There are lots of other methods I wrote that just make those two functions more human readable, but that is the gist of what I did
-to complete this assignment. 
+There are lots of other methods I wrote that just make those two functions more human readable, but that is the gist of what I did to complete this assignment. 
